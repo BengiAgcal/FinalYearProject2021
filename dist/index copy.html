@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Top Customizer 3D view</title>
+  <link rel="stylesheet" href="./style.css">
+  <link href="f.png" rel="shortcut icon" type="image/x-icon">
+  <link href="f.png" rel="apple-touch-icon">
+
+</head>
+<body>
+
+<head>
+    <meta charset="UTF-8">
+    
+    <!-- Imporant meta information to make the page as rigid as possible on mobiles, to avoid unintentional zooming on the page itself  -->
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Chair Tutorial</title>
+    <link href="https://fonts.googleapis.com/css?family=Raleway:500,700&display=swap" rel="stylesheet">
+</head>
+<!-- These toggle the the different parts of the chair that can be edited, note data-option is the key that links to the name of the part in the 3D file -->
+<div class="options">
+    <div class="option " data-option="1">
+      
+      <img src="A.png" alt=" V neck"/>
+    </div>
+    <div class="option" data-option="2">
+        <img src="B.png" alt=" round neck"/>
+    </div>
+    <div class="option" data-option="30">
+        <img src="3.png" alt="Sleeveless"/>
+    </div>
+    <div class="option" data-option="20">
+        <img src="4.png" alt="short sleeve"/>
+    </div>
+    <div class="option" data-option="10">
+        <img src="LS.png" alt="long sleeve"/>
+    </div>
+    <div class="option" data-option="200">
+        <img src="6.png" alt="cropped"/>
+    </div>
+    <div class="option" data-option="100">
+        <img src="5.png" alt="normal length"/>
+    </div>
+</div>
+
+<canvas id="c"></canvas>
+
+<div class="controls">
+<!-- This tray will be filled with colors via JS, and the ability to slide this panel will be added in with a lightweight slider script (no dependency used for this) -->
+ <div id="js-tray" class="tray">
+     <div id="js-tray-slide" class="tray__slide"></div>
+ </div>
+</div>
+
+  <!-- The main three.js file -->
+<script src='https://cdnjs.cloudflare.com/ajax/libs/three.js/108/three.min.js'></script>
+
+<!-- This brings in the ability to load custom 3D objects in the .gltf file format. Blender allows the ability to export to this format out the box -->
+ <!-- GLTFLoader.js
+<script src='https://cdn.jsdelivr.net/gh/mrdoob/three.js@r92/examples/js/loaders/GLTFLoader.js'></script>  -->
+
+<script src='https://cdn.jsdelivr.net/gh/mrdoob/three.js@r92/examples/js/loaders/GLTFLoader.js'></script> 
+<!-- This is a simple to use extension for three.js that activates all the rotating, dragging and zooming controls we need for both mouse and touch, there isn't a clear CDN for this that I can find -->
+<script src="https://unpkg.com/three@0.85.0/examples/js/controls/OrbitControls.js"></script>
+
+<script  src="script copy.js"></script>
+
+</body>
+</html>
